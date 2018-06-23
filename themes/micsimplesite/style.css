@@ -1,0 +1,51 @@
+/**
+ * Theme Name:      micsimplesite
+ * Theme URI:       http://micmun.de/themes/micsimplesite
+ * Description:     Theme für statische Seite einer Baugenossenschaft
+ * Author:          Michael Munzert
+ * Author URI:      http://micmun.de
+ * Version:         1.0
+*/
+
+.navbar-dark {
+   background-color: #2E2E2E;
+}
+
+.fixed-row-bottom {
+   position: relative;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   background-color: #2E2E2E;
+   color: rgba(255,255,255,.5);
+   margin-top: 10px;
+}
+
+@media (min-width: 768px) and (min-height: 790px) {
+   .fixed-row-bottom {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #2E2E2E;
+      color: rgba(255,255,255,.5);
+      margin-top: 10px;
+   }
+}
+
+h1, h2, h3, h4 {
+   color: blue;
+}
+
+@media (max-width: 767px) {
+   input, textarea {
+      width: 80%;
+   }
+   .accept {
+      width: auto;
+   }
+}
+
+.cfvalue {
+   background: #EFF2FB;
+}
