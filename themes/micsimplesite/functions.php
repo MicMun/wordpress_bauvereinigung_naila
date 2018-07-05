@@ -45,13 +45,6 @@ if (function_exists('register_sidebar')) {
                           'after_widget' => '</div>',
                           'before_title' => '<h4>',
                           'after_title' => '</h4>'));
-   register_sidebar(array('name' => 'Kontaktform',
-                          'id' => 'contactform',
-                          'description' => '',
-                          'before_widget' => '<div class="col-12 col-md-4 ml-md-auto order-2">',
-                          'after_widget' => '</div>',
-                          'before_title' => '<h4>',
-                          'after_title' => '</h4>'));
 
    register_sidebar(array('name' => 'Footer',
                           'id' => 'footer',
