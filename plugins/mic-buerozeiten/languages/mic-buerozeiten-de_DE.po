@@ -1,0 +1,79 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mic-buerozeiten 1.0.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Michael Munzert <Mic.Mun@gmx.de>\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.7\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: class-mic-buerozeiten-admin.php:113
+msgid "Settings for Mic-Buerozeiten."
+msgstr "Einstellungen für Mic-Buerozeiten."
+
+#: class-mic-buerozeiten-admin.php:121
+msgid "Time Title"
+msgstr "Zeiten-Titel"
+
+#: class-mic-buerozeiten-admin.php:132
+msgid "Monday"
+msgstr "Montag"
+
+#: class-mic-buerozeiten-admin.php:143
+msgid "Tuesday"
+msgstr "Dienstag"
+
+#: class-mic-buerozeiten-admin.php:154
+msgid "Wednesday"
+msgstr "Mittwoch"
+
+#: class-mic-buerozeiten-admin.php:165
+msgid "Thursday"
+msgstr "Donnerstag"
+
+#: class-mic-buerozeiten-admin.php:176
+msgid "Friday"
+msgstr "Freitag"
+
+#: class-mic-buerozeiten-admin.php:187
+msgid "Saturday"
+msgstr "Samstag"
+
+#: class-mic-buerozeiten-admin.php:198
+msgid "Sunday"
+msgstr "Sonntag"
+
+#: class-mic-buerozeiten-admin.php:209
+msgid "Reachable Text"
+msgstr "Text für Erreichbar"
+
+#: class-mic-buerozeiten-admin.php:220
+msgid "Unreachable Text"
+msgstr "Text für Nicht Erreichbar"
+
+#: class-mic-buerozeiten-admin.php:234
+msgid "Set your values"
+msgstr "Setze den gewünschten Wert"
+
+#: class-mic-buerozeiten-admin.php:562
+msgid "Mic-Buerozeiten Settings"
+msgstr "Mic-Buerozeiten Einstellungen"
+
+#: class-mic-buerozeiten-admin.php:582
+msgid "Settings Saved"
+msgstr "Einstellungen gespeichert"
+
+#: class-mic-buerozeiten-admin.php:598
+msgid "Save Settings"
+msgstr "Einstellungen speichern"
+
+#~ msgid "settings_section_title"
+#~ msgstr "Einstellungen für Mic-Buerozeiten"
+
+#~ msgid "settings_field_title"
+#~ msgstr "Titel"

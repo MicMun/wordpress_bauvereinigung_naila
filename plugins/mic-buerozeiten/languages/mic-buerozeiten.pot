@@ -1,0 +1,59 @@
+#: class-mic-buerozeiten-admin.php:113
+msgid "Settings for Mic-Buerozeiten."
+msgstr ""
+
+#: class-mic-buerozeiten-admin.php:121
+msgid "Time Title"
+msgstr ""
+
+#: class-mic-buerozeiten-admin.php:132
+msgid "Monday"
+msgstr ""
+
+#: class-mic-buerozeiten-admin.php:143
+msgid "Tuesday"
+msgstr ""
+
+#: class-mic-buerozeiten-admin.php:154
+msgid "Wednesday"
+msgstr ""
+
+#: class-mic-buerozeiten-admin.php:165
+msgid "Thursday"
+msgstr ""
+
+#: class-mic-buerozeiten-admin.php:176
+msgid "Friday"
+msgstr ""
+
+#: class-mic-buerozeiten-admin.php:187
+msgid "Saturday"
+msgstr ""
+
+#: class-mic-buerozeiten-admin.php:198
+msgid "Sunday"
+msgstr ""
+
+#: class-mic-buerozeiten-admin.php:209
+msgid "Reachable Text"
+msgstr ""
+
+#: class-mic-buerozeiten-admin.php:220
+msgid "Unreachable Text"
+msgstr ""
+
+#: class-mic-buerozeiten-admin.php:234
+msgid "Set your values"
+msgstr ""
+
+#: class-mic-buerozeiten-admin.php:562
+msgid "Mic-Buerozeiten Settings"
+msgstr ""
+
+#: class-mic-buerozeiten-admin.php:582
+msgid "Settings Saved"
+msgstr ""
+
+#: class-mic-buerozeiten-admin.php:598
+msgid "Save Settings"
+msgstr ""
