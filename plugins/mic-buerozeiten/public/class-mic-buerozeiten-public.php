@@ -108,6 +108,8 @@ class Mic_Buerozeiten_Public {
    public function micbde_shortcodes_init() {
       // Returns the text of reachable or not
       function isReachable( $options ) {
+         date_default_timezone_set('Europe/Berlin');
+
          $tage = array( "sunday_checked", "monday_checked", "tuesday_checked",
                         "wednesday_checked", "thursday_checked",
                         "friday_checked", "saturday_checked" );
@@ -158,45 +160,45 @@ class Mic_Buerozeiten_Public {
 
          if ($options['monday_checked']) {
             $content .= "<div class='daybox'>";
-            $content .= __('Monday', 'mic-buerozeiten') . " : </div>";
+            $content .= __('Monday', 'mic-buerozeiten') . ": </div>";
             $content .= "<div class='daybox'>" . $options['monday_time'];
-            $content .= "</div><br/><br/>";
+            $content .= "</div>";
          }
          if ($options['tuesday_checked']) {
             $content .= "<div class='daybox'>";
-            $content .= __('Tuesday', 'mic-buerozeiten') . " : </div>";
+            $content .= __('Tuesday', 'mic-buerozeiten') . ": </div>";
             $content .= "<div class='daybox'>" . $options['tuesday_time'];
-            $content .= "</div><br/><br/>";
+            $content .= "</div>";
          }
          if ($options['wednesday_checked']) {
             $content .= "<div class='daybox'>";
-            $content .= __('Wednesday', 'mic-buerozeiten') . " : </div>";
+            $content .= __('Wednesday', 'mic-buerozeiten') . ": </div>";
             $content .= "<div class='daybox'>" . $options['wednesday_time'];
-            $content .= "</div><br/><br/>";
+            $content .= "</div>";
          }
          if ($options['thursday_checked']) {
             $content .= "<div class='daybox'>";
-            $content .= __('Thursday', 'mic-buerozeiten') . " : </div>";
+            $content .= __('Thursday', 'mic-buerozeiten') . ": </div>";
             $content .= "<div class='daybox'>" . $options['thursday_time'];
-            $content .= "</div><br/><br/>";
+            $content .= "</div>";
          }
          if ($options['friday_checked']) {
             $content .= "<div class='daybox'>";
-            $content .= __('Friday', 'mic-buerozeiten') . " : </div>";
+            $content .= __('Friday', 'mic-buerozeiten') . ": </div>";
             $content .= "<div class='daybox'>" . $options['friday_time'];
-            $content .= "</div><br/><br/>";
+            $content .= "</div>";
          }
          if ($options['saturday_checked']) {
             $content .= "<div class='daybox'>";
-            $content .= __('Saturday', 'mic-buerozeiten') . " : </div>";
+            $content .= __('Saturday', 'mic-buerozeiten') . ": </div>";
             $content .= "<div class='daybox'>" . $options['saturday_time'];
-            $content .= "</div><br/><br/>";
+            $content .= "</div>";
          }
          if ($options['sunday_checked']) {
             $content .= "<div class='daybox'>";
-            $content .= __('Sunday', 'mic-buerozeiten') . " : </div>";
+            $content .= __('Sunday', 'mic-buerozeiten') . ": </div>";
             $content .= "<div class='daybox'>" . $options['sunday_time'];
-            $content .= "</div><br/><br/>";
+            $content .= "</div>";
          }
 
          $content .= "</div>";
