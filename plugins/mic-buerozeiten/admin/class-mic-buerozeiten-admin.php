@@ -111,7 +111,7 @@ class Mic_Buerozeiten_Admin {
       add_settings_section(
          'micbde_main_section',
          __( 'Settings for Mic-Buerozeiten.', 'mic-buerozeiten' ),
-         'micbde_main_section_cb',
+         __CLASS__.'::micbde_main_section_cb',
          'micbde'
        );
 
