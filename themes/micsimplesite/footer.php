@@ -1,4 +1,4 @@
-   <div class="row fixed-row-bottom justify-content-center">
+   <div class="row footer justify-content-center text-center">
       <?php if (!function_exists('dynamic_sidebar') || dynamic_sidebar('Footer')) : ?>
       <?php endif; ?>
    </div>

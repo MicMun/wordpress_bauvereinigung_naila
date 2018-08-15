@@ -7,30 +7,43 @@
  * Version:         1.0
 */
 
+html {
+  height: 97%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+}
+
 .navbar-dark {
    background-color: #2E2E2E;
 }
 
-.fixed-row-bottom {
-   position: relative;
+.row {
+   padding-bottom: 30px;
+}
+
+.footer {
+   position: absolute;
+   right: 0;
    bottom: 0;
    left: 0;
    width: 100%;
+   height: 30px;
    background-color: #2E2E2E;
-   color: rgba(255,255,255,.5);
-   margin-top: 10px;
 }
 
-@media (min-width: 768px) and (min-height: 790px) {
-   .fixed-row-bottom {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: #2E2E2E;
-      color: rgba(255,255,255,.5);
-      margin-top: 10px;
-   }
+.footer a {
+   color: #007bff;
 }
 
 h1, h2, h3, h4 {
