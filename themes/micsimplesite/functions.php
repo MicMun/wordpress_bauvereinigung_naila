@@ -49,8 +49,8 @@ if (function_exists('register_sidebar')) {
    register_sidebar(array('name' => 'Footer',
                           'id' => 'footer',
                           'description' => '',
-                          'before_widget' => '<div class="col-12 col-md-10 col-lg-8 col-md-bottom">',
-                          'after_widget' => '</div>',
+                          'before_widget' => '',
+                          'after_widget' => '',
                           'before_title' => '<h4>',
                           'after_title' => '</h4>'));
 }

@@ -1,10 +1,10 @@
 /**
  * Theme Name:      micsimplesite
- * Theme URI:       http://micmun.de/themes/micsimplesite
+ * Theme URI:       https://github.com/MicMun/wordpress_bauvereinigung_naila/themes/micsimplesite
  * Description:     Theme für statische Seite einer Baugenossenschaft
  * Author:          Michael Munzert
- * Author URI:      http://micmun.de
- * Version:         1.0
+ * Author URI:      https://github.com/MicMun
+ * Version:         1.0.0
 */
 
 html {
@@ -43,7 +43,8 @@ body {
 }
 
 .footer a {
-   color: #007bff;
+   color: #969696;
+   margin-right: 10px;
 }
 
 h1, h2, h3, h4 {
