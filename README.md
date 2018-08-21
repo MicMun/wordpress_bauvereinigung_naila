@@ -4,6 +4,19 @@
 
 Es gibt ein Theme _micsimplesite_ und ein Plugin _mic-buerozeiten_ für Wordpress.
 
+### micsimplesite
+
+Ein einfaches Theme mit Navigation oben, Hauptinhalt mit manchmal Sidebars (Startseite und Kontakt)
+und einen Footer für ein HTML-Widget.
+
+Das Theme ist im Responsive Design, das heißt es passt sich bei mobilen Geräten an.
+
+### mic-buerozeiten
+
+Das Plugin lässt die Bürozeiten oder Öffnungszeiten angeben, ein Widget lässt sich
+dann auf der Startseite des Theme _micsimplesite_ anzeigen.
+Das Plugin ist design-mäßig auf das Theme abgestimmt.
+
 ## Abhängigkeiten
 
 Es werden im Ordner **micsimplesite** die Ordner _css_ und _js_ von Bootstrap
