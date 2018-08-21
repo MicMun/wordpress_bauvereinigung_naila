@@ -3,17 +3,17 @@
 /**
  * Mic-Buerozeiten: Let you configure a widget with office opening times.
  *
- * @link              https://munzert-muenchen.de
+ * @link              https://github.com/MicMun/wordpress_bauvereinigung_naila/plugins/mic-buerozeiten
  * @since             1.0.0
  * @package           mic-buerozeiten
  *
  * @wordpress-plugin
  * Plugin Name:       Mic Bürozeiten
- * Plugin URI:        http://munzert-muenchen.de/mic-buerozeiten/
+ * Plugin URI:        https://github.com/MicMun/wordpress_bauvereinigung_naila/plugins/mic-buerozeiten/
  * Description:       Let you configure a widget with office opening times.
  * Version:           1.0.0
  * Author:            Michael Munzert
- * Author URI:        http://munzert-muenchen.de/
+ * Author URI:        https://github.com/MicMun
  * License:           GPL3
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain:       mic-buerozeiten
