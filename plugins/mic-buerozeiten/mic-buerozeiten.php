@@ -11,7 +11,7 @@
  * Plugin Name:       Mic Bürozeiten
  * Plugin URI:        https://github.com/MicMun/wordpress_bauvereinigung_naila/plugins/mic-buerozeiten/
  * Description:       Let you configure a widget with office opening times.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Author:            Michael Munzert
  * Author URI:        https://github.com/MicMun
  * License:           GPL3
@@ -31,7 +31,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'MIC_BUEROZEITEN_VERSION', '1.0.0' );
+define( 'MIC_BUEROZEITEN_VERSION', '1.1.0' );
 
 /**
  * The code that runs during plugin activation.

@@ -108,8 +108,6 @@ class Mic_Buerozeiten_Public {
    public function micbde_shortcodes_init() {
       // Returns the text of reachable or not
       function isReachable( $options ) {
-         date_default_timezone_set('Europe/Berlin');
-
          $tage = array( "sunday_checked", "monday_checked", "tuesday_checked",
                         "wednesday_checked", "thursday_checked",
                         "friday_checked", "saturday_checked" );
@@ -143,18 +141,43 @@ class Mic_Buerozeiten_Public {
          return $options['text_unreachable'];
       }
 
+      // Returns the text of away status or empty string
+      function isAway( $options ) {
+         date_default_timezone_set('Europe/Berlin');
+
+         if ( ! $options["from_away"] || ! $options["until_away"] ) {
+            return '';
+         }
+
+         $from = date_create_from_format("d.m.Y G:i", $options["from_away"]." 00:00");
+         $until = date_create_from_format("d.m.Y G:i", $options["until_away"]." 23:59");
+
+         $now = date_create_from_format("d.m.Y", date("d.m.Y"));
+
+         if ( $now >= $from && $now <= $until ) {
+            return $options["text_away"];
+         }
+         return '';
+      }
+
       function micbde_widget_shortcode($atts = [], $content = null) {
          $options = get_option( 'micbde_options' );
 
          $content = "<h4>".$options['micbde_field_title']."</h4>";
 
-         $reachable = isReachable($options);
-         $reachableClass = 'micbde_unreachable';
-         if ($reachable == $options['text_reachable']) {
-            $reachableClass = 'micbde_reachable';
-         }
+         $away = isAway($options);
 
-         $content .= "<div class='micbde_status ". $reachableClass ."'>".$reachable."</div>";
+         if ( ! empty($away) ) { // Away from work
+            $content .= "<div class='micbde_status bg-dark micbde_unreachable'>".$away."</div>";
+         } else {
+            $reachable = isReachable($options);
+            $reachableClass = 'micbde_unreachable';
+            if ($reachable == $options['text_reachable']) {
+               $reachableClass = 'micbde_reachable';
+            }
+
+            $content .= "<div class='micbde_status bg-dark ". $reachableClass ."'>".$reachable."</div>";
+         }
 
          $content .= "<div class='micbde_times'>";
 

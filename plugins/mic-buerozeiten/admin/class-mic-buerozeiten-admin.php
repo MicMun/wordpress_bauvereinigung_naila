@@ -225,13 +225,46 @@ class Mic_Buerozeiten_Admin {
             'label_for' => 'text_unreachable',
          ]
       );
+
+      add_settings_field(
+         'text_away',
+         __( 'Away Text', 'mic-buerozeiten' ),
+         __CLASS__.'::setting_away_text_fn',
+         'micbde',
+         'micbde_main_section',
+         [
+            'label_for' => 'text_away',
+         ]
+      );
+
+      add_settings_field(
+         'from_away',
+         __( 'Away From', 'mic-buerozeiten' ),
+         __CLASS__.'::setting_away_from_fn',
+         'micbde',
+         'micbde_main_section',
+         [
+            'label_for' => 'from_away',
+         ]
+      );
+
+      add_settings_field(
+         'until_away',
+         __( 'Away Until', 'mic-buerozeiten' ),
+         __CLASS__.'::setting_away_until_fn',
+         'micbde',
+         'micbde_main_section',
+         [
+            'label_for' => 'until_away',
+         ]
+      );
    }
 
    // section callbacks can accept an $args parameter, which is an array.
    // $args have the following keys defined: title, id, callback.
    // the values are defined at the add_settings_section() function.
    public function micbde_main_section_cb( $args ) {
-      echo "<p id='".esc_attr( $args['id'] )."'>".esc_html_e( 'Set your values.', 'mic-buerozeiten' )."</p>";
+      echo "<p id='".esc_attr( $args['id'] )."'>".__( 'Set your values.', 'mic-buerozeiten' )."</p>";
    }
 
    // field callbacks can accept an $args parameter, which is an array.
@@ -260,7 +293,10 @@ class Mic_Buerozeiten_Admin {
             'sunday_checked' => false,
             'sunday_time' => '',
             'text_reachable' => 'Erreichbar',
-            'text_unreachable' => 'Nicht Erreichbar'
+            'text_unreachable' => 'Nicht Erreichbar',
+            'text_away' => 'Betriebsurlaub',
+            'from_away' => '',
+            'until_away' => ''
          ] );
 
       // output the field
@@ -288,7 +324,10 @@ class Mic_Buerozeiten_Admin {
             'sunday_checked' => false,
             'sunday_time' => '',
             'text_reachable' => 'Erreichbar',
-            'text_unreachable' => 'Nicht Erreichbar'
+            'text_unreachable' => 'Nicht Erreichbar',
+            'text_away' => 'Betriebsurlaub',
+            'from_away' => '',
+            'until_away' => ''
          ] );
 
       if ($options['monday_checked']) {
@@ -321,7 +360,10 @@ class Mic_Buerozeiten_Admin {
             'sunday_checked' => false,
             'sunday_time' => '',
             'text_reachable' => 'Erreichbar',
-            'text_unreachable' => 'Nicht Erreichbar'
+            'text_unreachable' => 'Nicht Erreichbar',
+            'text_away' => 'Betriebsurlaub',
+            'from_away' => '',
+            'until_away' => ''
          ] );
 
       if ($options['tuesday_checked']) {
@@ -354,7 +396,10 @@ class Mic_Buerozeiten_Admin {
             'sunday_checked' => false,
             'sunday_time' => '',
             'text_reachable' => 'Erreichbar',
-            'text_unreachable' => 'Nicht Erreichbar'
+            'text_unreachable' => 'Nicht Erreichbar',
+            'text_away' => 'Betriebsurlaub',
+            'from_away' => '',
+            'until_away' => ''
          ] );
 
       if ($options['wednesday_checked']) {
@@ -387,7 +432,10 @@ class Mic_Buerozeiten_Admin {
             'sunday_checked' => false,
             'sunday_time' => '',
             'text_reachable' => 'Erreichbar',
-            'text_unreachable' => 'Nicht Erreichbar'
+            'text_unreachable' => 'Nicht Erreichbar',
+            'text_away' => 'Betriebsurlaub',
+            'from_away' => '',
+            'until_away' => ''
          ] );
 
       if ($options['thursday_checked']) {
@@ -420,7 +468,10 @@ class Mic_Buerozeiten_Admin {
             'sunday_checked' => false,
             'sunday_time' => '',
             'text_reachable' => 'Erreichbar',
-            'text_unreachable' => 'Nicht Erreichbar'
+            'text_unreachable' => 'Nicht Erreichbar',
+            'text_away' => 'Betriebsurlaub',
+            'from_away' => '',
+            'until_away' => ''
          ] );
 
       if ($options['friday_checked']) {
@@ -453,7 +504,10 @@ class Mic_Buerozeiten_Admin {
             'sunday_checked' => false,
             'sunday_time' => '',
             'text_reachable' => 'Erreichbar',
-            'text_unreachable' => 'Nicht Erreichbar'
+            'text_unreachable' => 'Nicht Erreichbar',
+            'text_away' => 'Betriebsurlaub',
+            'from_away' => '',
+            'until_away' => ''
          ] );
 
       if ($options['saturday_checked']) {
@@ -486,7 +540,10 @@ class Mic_Buerozeiten_Admin {
             'sunday_checked' => false,
             'sunday_time' => '',
             'text_reachable' => 'Erreichbar',
-            'text_unreachable' => 'Nicht Erreichbar'
+            'text_unreachable' => 'Nicht Erreichbar',
+            'text_away' => 'Betriebsurlaub',
+            'from_away' => '',
+            'until_away' => ''
          ] );
 
       if ($options['sunday_checked']) {
@@ -519,7 +576,10 @@ class Mic_Buerozeiten_Admin {
             'sunday_checked' => false,
             'sunday_time' => '',
             'text_reachable' => 'Erreichbar',
-            'text_unreachable' => 'Nicht Erreichbar'
+            'text_unreachable' => 'Nicht Erreichbar',
+            'text_away' => 'Betriebsurlaub',
+            'from_away' => '',
+            'until_away' => ''
          ] );
 
       echo "<input id='text_reachable' name='micbde_options[text_reachable]'
@@ -546,11 +606,104 @@ class Mic_Buerozeiten_Admin {
             'sunday_checked' => false,
             'sunday_time' => '',
             'text_reachable' => 'Erreichbar',
-            'text_unreachable' => 'Nicht Erreichbar'
+            'text_unreachable' => 'Nicht Erreichbar',
+            'text_away' => 'Betriebsurlaub',
+            'from_away' => '',
+            'until_away' => ''
          ] );
 
       echo "<input id='text_unreachable' name='micbde_options[text_unreachable]'
          type='text' value='".$options['text_unreachable']."'/>";
+   }
+
+   // Callback for away text settings
+   public function setting_away_text_fn() {
+      $options = get_option( 'micbde_options',
+         [
+            'micbde_field_title' => 'Bürozeiten',
+            'monday_checked' => true,
+            'monday_time' => '09:30-11:30',
+            'tuesday_checked' => true,
+            'tuesday_time' => '09:30-11:30',
+            'wednesday_checked' => false,
+            'wednesday_time' => '09:30-11:30',
+            'thursday_checked' => true,
+            'thursday_time' => '09:30-11:30',
+            'friday_checked' => true,
+            'friday_time' => '09:30-11:30',
+            'saturday_checked' => false,
+            'saturday_time' => '',
+            'sunday_checked' => false,
+            'sunday_time' => '',
+            'text_reachable' => 'Erreichbar',
+            'text_unreachable' => 'Nicht Erreichbar',
+            'text_away' => 'Betriebsurlaub',
+            'from_away' => '',
+            'until_away' => ''
+         ] );
+
+      echo "<input id='text_away' name='micbde_options[text_away]'
+         type='text' value='".$options['text_away']."'/>";
+   }
+
+   // Callback for away from settings
+   public function setting_away_from_fn() {
+      $options = get_option( 'micbde_options',
+         [
+            'micbde_field_title' => 'Bürozeiten',
+            'monday_checked' => true,
+            'monday_time' => '09:30-11:30',
+            'tuesday_checked' => true,
+            'tuesday_time' => '09:30-11:30',
+            'wednesday_checked' => false,
+            'wednesday_time' => '09:30-11:30',
+            'thursday_checked' => true,
+            'thursday_time' => '09:30-11:30',
+            'friday_checked' => true,
+            'friday_time' => '09:30-11:30',
+            'saturday_checked' => false,
+            'saturday_time' => '',
+            'sunday_checked' => false,
+            'sunday_time' => '',
+            'text_reachable' => 'Erreichbar',
+            'text_unreachable' => 'Nicht Erreichbar',
+            'text_away' => 'Betriebsurlaub',
+            'from_away' => '',
+            'until_away' => ''
+         ] );
+
+      echo "<input id='from_away' name='micbde_options[from_away]'
+         type='text' value='".$options['from_away']."'/>";
+   }
+
+   // Callback for away until settings
+   public function setting_away_until_fn() {
+      $options = get_option( 'micbde_options',
+         [
+            'micbde_field_title' => 'Bürozeiten',
+            'monday_checked' => true,
+            'monday_time' => '09:30-11:30',
+            'tuesday_checked' => true,
+            'tuesday_time' => '09:30-11:30',
+            'wednesday_checked' => false,
+            'wednesday_time' => '09:30-11:30',
+            'thursday_checked' => true,
+            'thursday_time' => '09:30-11:30',
+            'friday_checked' => true,
+            'friday_time' => '09:30-11:30',
+            'saturday_checked' => false,
+            'saturday_time' => '',
+            'sunday_checked' => false,
+            'sunday_time' => '',
+            'text_reachable' => 'Erreichbar',
+            'text_unreachable' => 'Nicht Erreichbar',
+            'text_away' => 'Betriebsurlaub',
+            'from_away' => '',
+            'until_away' => ''
+         ] );
+
+      echo "<input id='until_away' name='micbde_options[until_away]'
+         type='text' value='".$options['until_away']."'/>";
    }
 
    /**

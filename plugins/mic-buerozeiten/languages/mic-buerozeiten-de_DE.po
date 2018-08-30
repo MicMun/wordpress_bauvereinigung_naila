@@ -12,6 +12,10 @@ msgstr ""
 "X-Generator: Poedit 2.0.7\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: mic-buerozeiten.php:13
+msgid "Let you configure a widget with office opening times."
+msgstr "Konfiguration eines Widgets mit den Büro-Öffnungszeiten."
+
 #: class-mic-buerozeiten-admin.php:113
 msgid "Settings for Mic-Buerozeiten."
 msgstr "Einstellungen für Mic-Buerozeiten."
@@ -56,9 +60,21 @@ msgstr "Text für Erreichbar"
 msgid "Unreachable Text"
 msgstr "Text für Nicht Erreichbar"
 
-#: class-mic-buerozeiten-admin.php:234
-msgid "Set your values"
-msgstr "Setze den gewünschten Wert"
+#: class-mic-buerozeiten-admin.php:231
+msgid "Away Text"
+msgstr "Abwesenheitstext"
+
+#: class-mic-buerozeiten-admin.php:242
+msgid "Away From"
+msgstr "Abwesend von"
+
+#: class-mic-buerozeiten-admin.php:253
+msgid "Away Until"
+msgstr "Abwesend bis"
+
+#: class-mic-buerozeiten-admin.php:267
+msgid "Set your values."
+msgstr "Setze den gewünschten Wert."
 
 #: class-mic-buerozeiten-admin.php:562
 msgid "Mic-Buerozeiten Settings"
