@@ -155,7 +155,7 @@ class Mic_Buerozeiten_Public {
          $now = date_create_from_format("d.m.Y", date("d.m.Y"));
 
          if ( $now >= $from && $now <= $until ) {
-            return $options["text_away"];
+            return $options["text_away"]." ( bis ".$until->format("d.m.Y")." )";
          }
          return '';
       }
