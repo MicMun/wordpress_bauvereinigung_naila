@@ -45,19 +45,12 @@ if (function_exists('register_sidebar')) {
                           'after_widget' => '</div>',
                           'before_title' => '<h4>',
                           'after_title' => '</h4>'));
-
-   register_sidebar(array('name' => 'Footer',
-                          'id' => 'footer',
-                          'description' => '',
-                          'before_widget' => '',
-                          'after_widget' => '',
-                          'before_title' => '<h4>',
-                          'after_title' => '</h4>'));
 }
 
 function pwwp_micsimplesite_setup() {
    register_nav_menus(  array(
-                        'primary' => __('Primary Navigation', 'micsimplesite')
+                        'primary' => __('Primary Navigation', 'micsimplesite'),
+                        'secondary' => __('Secondary Navigation', 'micsimplesite')
                         )
                      );
    add_theme_support('custom-logo', array( 'height' => 80,
