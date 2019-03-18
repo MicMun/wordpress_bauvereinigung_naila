@@ -8,11 +8,13 @@
       <?php
          query_posts('post_type=angebot&post_status=publish');
 
-         if ( have_posts() ) : while ( have_posts() ) : the_post();
+         if ( have_posts() ) :
+            while ( have_posts() ) :
+               the_post();
       ?>
-         <?php $custom_fields = get_post_custom( $post->ID ); ?>
+         <?php $custom_fields = get_post_custom( $post->ID );?>
 
-         <h5><?php the_title(); ?> <i><small>(Stand: <?php the_date('d.m.Y'); ?>)</small></i></h5>
+         <h5><?php the_title(); ?> <i><small>(Stand: <?php the_time("d.m.Y"); ?>)</small></i></h5>
          <div class="container">
             <div class="row justify-content-start">
                <div class="col-6 col-md-2">
